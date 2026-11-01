@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="id"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Perangkat Ajar KM SD</title>
+<title>Perangkat Ajar KM SD</title><!-- versi 20261101 -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
 <style>
 :root{--bg:#f1f3f7;--side:#2c3440;--side2:#232a35;--tx:#4a5361;--pk:#f0286b;--pu:#7b1fa2;--c1:#7c4dff;--c2:#f5a623;--c3:#26b779;--c4:#e91e63;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -164,7 +164,7 @@ function buildMenu(){try{const d=W().eval('DOCS.map(x=>[x[0],x[1]])');CURK=W().e
  document.querySelectorAll('[data-d]').forEach(a=>a.onclick=()=>{CURK=a.dataset.d;W().eval("cur='"+CURK+"';draw()");sync();$('#sd').classList.remove('o');location.hash==='#app'?route():location.hash='app'});sync();route()}catch(e){}}
 $('#fr').onload=buildMenu;
 $('#stg').onclick=()=>{const was=location.hash==='#app';location.hash='app';$('#sd').classList.remove('o');try{const t=W().document.querySelector('#stp');t.open=was?!t.open:true;if(t.open)t.scrollIntoView()}catch(e){}};
-function enter(){$('#fr').src='perangkat-ajar.html';$('#app').classList.remove('hide');$('#pn').textContent=ME.nama;$('#av').textContent=ME.nama.trim()[0]?.toUpperCase()||'?';
+function enter(){$('#fr').src='perangkat-ajar.html?v=20261101';$('#app').classList.remove('hide');$('#pn').textContent=ME.nama;$('#av').textContent=ME.nama.trim()[0]?.toUpperCase()||'?';
  document.querySelectorAll('.adm').forEach(a=>a.classList.toggle('hide',ME.role!=='admin'));route()}
 document.querySelectorAll('[data-v]').forEach(a=>a.onclick=()=>{location.hash=a.dataset.v;$('#sd').classList.remove('o')});
 addEventListener('hashchange',()=>ME&&route());
